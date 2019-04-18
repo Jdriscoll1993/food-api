@@ -33,16 +33,7 @@
 //         });
 // }
 
-const el = document.querySelector(".foodList");
-//make button work*--get a reference to the button
-const getDataButton = document.getElementById("btn-getData");
-// add the listener so when we click on it itll do something
-getDataButton.addEventListener("click", () => getFoodData("drinks"));
-//when it hears the click, itl call the function "getData"
 
-const getDataButton2 = document.getElementById("btn-getData2");
-// add the listener so when we click on it itll do something
-getDataButton2.addEventListener("click", () => getFoodData("food"));
 
 
 
@@ -167,24 +158,49 @@ getDataButton2.addEventListener("click", () => getFoodData("food"));
 //             });
 //             document.getElementById('output').innerHTML = output;
 //         })
-// }
+// let HTMLel = "";
+//     (foodItem.name)
+//     HTMLel += `<h2>${foodItem.name}</h2>`
+
+//     if (foodItem.category) {
+//         HTMLel += `<p>${foodItem.category}</p>`
+//     }
+//     if (foodItem.ethnicity) {
+//         HTMLel += `<p>${foodItem.ethnicity}</p>`
+//     }
+//     return HTMLel;// }
+
+const el = document.querySelector('.foodList');
+//make button work*--get a reference to the button
+const getDataButton = document.getElementById("btn-getData");
+// add the listener so when we click on it itll do something
+getDataButton.addEventListener('click', () => getFoodData('drinks'));
+//when it hears the click, itl call the function "getFoodData"
+const getDataButton2 = document.getElementById("btn-getData2");
+// add the listener so when we click on it itll do something
+getDataButton2.addEventListener('click', () => getFoodData('food'));
 
 
 function getFoodData(resource) {
-    let foodList = document.querySelector(".foodList");
-    foodList.innerHTML + "";
+    const foodList = document.querySelector(".foodList");
+    foodList.innerHTML = "";
+    console.log(foodList);
     fetch(`http://localhost:8088/${resource}`)
-        .then((res) => {
-            let jsonResult = res.json();
-            console.log(jsonResult);
-        })
+        .then(res => res.json()
+        )
         .then(parsedFoods => {
             console.table(parsedFoods);
             parsedFoods.forEach(food => {
                 fetch(`https://world.openfoodfacts.org/api/v0/product/${food.barcode}.json`)
                     .then(res => res.json())
                     .then(parsedAPIfoods => {
-                        foodList.innerHTML += foodFactory(food, parsedAPIfoods);
+                        if (resource === 'food') {
+                            foodList.innerHTML += foodFactory(food, parsedAPIfoods)
+                        } else if (resource === 'drinks') {
+                            foodList.innerHTML += drinkFactory(food, parsedAPIfoods)
+                        // } else {
+                        //     foodList.innerHtml = "";
+                        }
                     });
             });
         });
@@ -194,10 +210,20 @@ function foodFactory(localFood, apiFood) {
     return `
     <div class="food_list">
         <h2>${localFood.name}</h2>
+        <h4>${localFood.barcode}</h4>
         <h3>${localFood.ethnicity}</h3>
         <img src="${apiFood.product.image_url}">
-        <p>${localFood.type}</p>
-        <p>country${apiFood.product.countries}</p>
+        <p>country: ${apiFood.product.countries}</p>
+    </div>`
+}
+
+function drinkFactory(localFood, apiFood) {
+    return `
+    <div class="drink_list">
+        <h2>${localFood.name}</h2>
+        <h3>${localFood.ethnicity}</h3>
+        <img src="${apiFood.product.image_url}">
+        <p>country: ${apiFood.product.countries}</p>
     </div>`
 }
 

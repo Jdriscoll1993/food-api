@@ -5,76 +5,79 @@
     "name": "Linguine",
     "category": "pasta",
     "ethnicity": "italian",
-    "barcode":8076809523509
+    "barcode":"8076809523509"
   },
   {
     "id": 2,
     "name": "Massaman curry",
     "category": "curry",
     "ethnicity": "thai",
-    "barcode":9556041612548
+    "barcode":"9556041612548"
   },
   {
     "id": 3,
     "name": "Green curry",
     "category": "curry",
     "ethnicity": "thai",
-    "barcode":0044738102353
+    "barcode":"0044738102353"
   },
   {
     "id": 4,
     "name": "Ravioli Funghi",
     "category": "pasta",
     "ethnicity": "italian",
-    "barcode":5
+    "barcode":"8001665127585"
   },
   {
     "id": 5,
     "name": "Tuscan Soup",
     "category": "vegetarian",
     "ethnicity": "italian",
-    "barcode":5
+    "barcode":"5000169116562"
   },
   {
+    "id": 6,
     "name": "Toast",
     "category": "Grilled Cheese",
     "ethnicity": "American",
-    "id": 6,
-    "barcode":5
+    "barcode":"7616700002577"
   },
   {
+    "id": 7,
     "name": "Ham and Cheese",
     "category": "Grilled Cheese",
     "ethnicity": "American",
-    "id": 7,
-    "barcode":5
+    "barcode":"3581084800108"
   },
   {
-    "name": "Turkey and cheese",
-    "category": "Grilled cheese",
-    "ethnicity": "American",
     "id": 8,
-    "barcode":5
+    "name": "Turkey",
+    "category": "Holiday Food",
+    "ethnicity": "American",
+    "barcode":"3560070855926"
   }
 ],
 "drinks": [
   {
+    "id": 1,
     "name": "gatorade",
     "category": "sports drink",
-    "id": 1,
-    "barcode":5
+    "ethnicity": "Refreshing and crisp",
+    "barcode":"8001160002981"
   },
   {
-    "name": "tea",
-    "category": "hot beverage",
     "id": 2,
-    "barcode":5
+    "name": "tea",
+    "category": "hot or iced beverage",
+    "ethnicity": "Warm you up or cool you off",
+    "barcode":"8712100369278"
   },
   {
+    "id": 3,
     "name": "coffee",
     "category": "hot or iced beverage",
-    "id": 3,
-    "barcode":5
+    "ethnicity": "Warm you up or cool you off",
+    "barcode":"3033710075232"
   }
 ]
 }
