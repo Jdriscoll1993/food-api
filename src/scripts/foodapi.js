@@ -213,7 +213,7 @@ function foodFactory(localFood, apiFood) {
         <h4>${localFood.barcode}</h4>
         <h3>${localFood.ethnicity}</h3>
         <img src="${apiFood.product.image_url}">
-        <p>country: ${apiFood.product.countries}</p>
+        <p class="countryF">country: ${apiFood.product.countries}</p>
     </div>`
 }
 
@@ -221,9 +221,10 @@ function drinkFactory(localFood, apiFood) {
     return `
     <div class="drink_list">
         <h2>${localFood.name}</h2>
+        <h4>${localFood.barcode}</h4>
         <h3>${localFood.ethnicity}</h3>
         <img src="${apiFood.product.image_url}">
-        <p>country: ${apiFood.product.countries}</p>
+        <p class="countryD">country: ${apiFood.product.countries}</p>
     </div>`
 }
 
