@@ -1,0 +1,80 @@
+{
+"food": [
+  {
+    "id": 1,
+    "name": "Linguine",
+    "category": "pasta",
+    "ethnicity": "italian",
+    "barcode":8076809523509
+  },
+  {
+    "id": 2,
+    "name": "Massaman curry",
+    "category": "curry",
+    "ethnicity": "thai",
+    "barcode":9556041612548
+  },
+  {
+    "id": 3,
+    "name": "Green curry",
+    "category": "curry",
+    "ethnicity": "thai",
+    "barcode":0044738102353
+  },
+  {
+    "id": 4,
+    "name": "Ravioli Funghi",
+    "category": "pasta",
+    "ethnicity": "italian",
+    "barcode":5
+  },
+  {
+    "id": 5,
+    "name": "Tuscan Soup",
+    "category": "vegetarian",
+    "ethnicity": "italian",
+    "barcode":5
+  },
+  {
+    "name": "Toast",
+    "category": "Grilled Cheese",
+    "ethnicity": "American",
+    "id": 6,
+    "barcode":5
+  },
+  {
+    "name": "Ham and Cheese",
+    "category": "Grilled Cheese",
+    "ethnicity": "American",
+    "id": 7,
+    "barcode":5
+  },
+  {
+    "name": "Turkey and cheese",
+    "category": "Grilled cheese",
+    "ethnicity": "American",
+    "id": 8,
+    "barcode":5
+  }
+],
+"drinks": [
+  {
+    "name": "gatorade",
+    "category": "sports drink",
+    "id": 1,
+    "barcode":5
+  },
+  {
+    "name": "tea",
+    "category": "hot beverage",
+    "id": 2,
+    "barcode":5
+  },
+  {
+    "name": "coffee",
+    "category": "hot or iced beverage",
+    "id": 3,
+    "barcode":5
+  }
+]
+}

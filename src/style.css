@@ -1,0 +1,60 @@
+
+h1, h2 {
+color: springgreen;
+padding: .2em;
+display: flex;
+justify-content: space-evenly;
+
+}
+
+h1 {
+    font-size: 50pt;
+    margin: 50px;
+    padding-bottom: 100px;
+    padding-top: 80px;
+}
+
+p {
+color: black;
+display: flex;
+justify-content: space-evenly;
+margin: .2em;
+}
+
+body {
+    background-color:lightsalmon;
+}
+
+#btn-getData2{
+   background-color: rgb(175, 140, 207);
+   color: #c0ffee;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#btn-getData{
+    background-color: #c0ffee;
+    color: rgb(175, 140, 207);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#buttons {
+    display: flex; 
+    justify-content: center;
+    justify-content: space-evenly;
+    border: none;
+
+}
+
+.foodList {
+    background-color: lightcoral;
+    border-radius:50px;
+}
+
